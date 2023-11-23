@@ -356,8 +356,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3ef383a9fb4c364a894318c44e0683c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movSpeed: 5
-  _PlayerRb: {fileID: 2062206105}
   shot_point: {fileID: 615139805}
   bullet: {fileID: 6950185088234939507, guid: 999d0842bff6f56409139c1d478d2b77, type: 3}
   ability_PB: {fileID: 6950185088234939507, guid: 999d0842bff6f56409139c1d478d2b77, type: 3}
@@ -374,8 +372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6500eccb44eb2634082a32eba58e35eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movSpeed: 5
-  _PlayerRb: {fileID: 2062206105}
+  _movSpeed: 1
 --- !u!114 &2062206103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -388,8 +385,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d02e9066df4b44c4797ba3cc29d517ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movSpeed: 1
-  _PlayerRb: {fileID: 2062206105}
 --- !u!60 &2062206104
 PolygonCollider2D:
   m_ObjectHideFlags: 0

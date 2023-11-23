@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShootEn : EnBullet
+public class ShootEn : Bullet
 {
     GameObject Enbullet;
     Transform SpawnerBulletEn;

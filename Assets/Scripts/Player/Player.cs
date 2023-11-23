@@ -2,32 +2,37 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
-{
+[RequireComponent(typeof(Rigidbody2D))]
+ public class Player : MonoBehaviour
+ {
     [Header("Values")]
     private int _PlayerLife = 200;
-    public float _movSpeed = 1;
-    [SerializeField] public Rigidbody2D _PlayerRb;
 
-
-
+    private void Awake()
+    {
+        if (!GetComponent<Rigidbody2D>())
+        {
+            Rigidbody2D _playerRb = gameObject.AddComponent<Rigidbody2D>();
+            _playerRb.gravityScale = 0f;
+        }
+    }
     void Update()
     {
         if (_PlayerLife <= 0)
         {
             Destroy(gameObject);
-        }else
+        } else
         {
-            move();
+            movePL();
             shoot();
         }
-
     }
-    public virtual void move()
+    public virtual void movePL()
     {
     }
-
     public virtual void shoot()
     {
     }
-}
+
+
+ }

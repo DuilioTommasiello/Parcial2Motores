@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class EnBullet : MonoBehaviour
+public abstract class Bullet : MonoBehaviour
 {
     float spdBulEn;
     float dmgBulEn = 25;
