@@ -16,16 +16,18 @@ public class Player : MonoBehaviour
         if (_PlayerLife <= 0)
         {
             Destroy(gameObject);
+        }else
+        {
+            move();
+            shoot();
         }
 
     }
     public virtual void move()
     {
-        Debug.Log("move esta funcionando");
     }
 
     public virtual void shoot()
     {
-        Debug.Log("shoot esta funcionando");
     }
 }

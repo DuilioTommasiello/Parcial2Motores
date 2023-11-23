@@ -360,7 +360,8 @@ MonoBehaviour:
   _PlayerRb: {fileID: 2062206105}
   shot_point: {fileID: 615139805}
   bullet: {fileID: 6950185088234939507, guid: 999d0842bff6f56409139c1d478d2b77, type: 3}
-  ability_PB: {fileID: 0}
+  ability_PB: {fileID: 6950185088234939507, guid: 999d0842bff6f56409139c1d478d2b77, type: 3}
+  bulletSpeed: 5
 --- !u!114 &2062206102
 MonoBehaviour:
   m_ObjectHideFlags: 0
