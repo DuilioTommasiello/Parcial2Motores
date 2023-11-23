@@ -8,6 +8,7 @@ public class MovmentEnemy : Enemy
     [SerializeField] GameObject target;
     [SerializeField] List<Transform> wayPoints;
     int nextPost = 0;
+    
 
     private void Update()
     {
