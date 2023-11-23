@@ -8,14 +8,20 @@ public class MovmentEnemy : Enemy
     [SerializeField] GameObject target;
     [SerializeField] List<Transform> wayPoints;
     int nextPost = 0;
-    
+
 
     private void Update()
     {
-        patrol();
+        Patrol();
     }
-    void patrol()
+
+    public override void TakeDmg(int dmg)
     {
+        base.TakeDmg(dmg);
+    }
+    public override void Patrol()
+    {
+
         transform.position = Vector3.MoveTowards(transform.position, wayPoints[nextPost].transform.position, Enspeed * Time.deltaTime);
         if (transform.position == wayPoints[nextPost].transform.position)
         {
@@ -23,4 +29,5 @@ public class MovmentEnemy : Enemy
             if (nextPost >= wayPoints.Count) nextPost = 0;
         }
     }
+    
 }

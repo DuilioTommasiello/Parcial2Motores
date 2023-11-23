@@ -8,6 +8,7 @@ public abstract class Bullet : MonoBehaviour
     float dmgBulEn = 25;
     GameObject target;
     Rigidbody2D RgBul;
+    
 
 
 }
