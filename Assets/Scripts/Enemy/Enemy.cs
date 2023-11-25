@@ -4,12 +4,7 @@ using UnityEngine;
 
 public abstract class Enemy : MonoBehaviour , Damagable
 {
-    public float Enlife;
-    public float Enspeed;
-    public GameObject Enbullet;
-    public Transform SpawnerBulletEn, player;
-    public float TimerBull, angle;
-    public float finalTimerBull = 3;
+    private float Enlife = 100;
 
     public delegate void MyMetod();
     public static event MyMetod eventCall;
@@ -20,6 +15,7 @@ public abstract class Enemy : MonoBehaviour , Damagable
         {
             eventCall();
         }
+        shot();
     }
     public virtual void TakeDmg(int dmg)
     {
@@ -29,7 +25,7 @@ public abstract class Enemy : MonoBehaviour , Damagable
             Destroy(gameObject);
 
     }
-
-    public virtual void lookAt() {}
+    public virtual void shot(){}
+    public virtual void lookPL(){}
     public virtual void Patrol(){}
 }

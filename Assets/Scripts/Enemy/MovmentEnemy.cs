@@ -5,6 +5,7 @@ using UnityEngine;
 public class MovmentEnemy : Enemy
 {
     [Header("Values")]
+    public float Enspeed;
     [SerializeField] GameObject target;
     [SerializeField] List<Transform> wayPoints;
     int nextPost = 0;
@@ -14,14 +15,8 @@ public class MovmentEnemy : Enemy
     {
         Patrol();
     }
-
-    public override void TakeDmg(int dmg)
-    {
-        base.TakeDmg(dmg);
-    }
     public override void Patrol()
     {
-
         transform.position = Vector3.MoveTowards(transform.position, wayPoints[nextPost].transform.position, Enspeed * Time.deltaTime);
         if (transform.position == wayPoints[nextPost].transform.position)
         {
