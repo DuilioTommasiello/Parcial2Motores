@@ -5,7 +5,6 @@ using UnityEngine;
 public class ShootEn : Enemy
 {
     public GameObject Enbullet;
-    public GameObject enemy;
     public Transform SpawnerBulletEn;
     public float TimerBull;
     public float finalTimerBull = 3;
@@ -15,7 +14,7 @@ public class ShootEn : Enemy
         TimerBull += Time.deltaTime;
         if (TimerBull >= finalTimerBull)
         {
-            Instantiate(Enbullet, SpawnerBulletEn.position, enemy.transform.rotation);
+            Instantiate(Enbullet, SpawnerBulletEn.position, SpawnerBulletEn.transform.rotation);
             TimerBull = 0f;
         }
     }

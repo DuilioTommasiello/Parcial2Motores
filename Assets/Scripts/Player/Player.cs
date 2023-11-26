@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
- public class Player : MonoBehaviour
- {
+public abstract  class Player : MonoBehaviour,Damagable
+{
     [Header("Values")]
-    private int _PlayerLife = 200;
+    [SerializeField] private int _PlayerLife = 200;
 
     private void Awake()
     {
@@ -21,7 +21,8 @@ using UnityEngine;
         if (_PlayerLife <= 0)
         {
             Destroy(gameObject);
-        } else
+        }
+        else
         {
             movePL();
             shoot();
@@ -33,6 +34,12 @@ using UnityEngine;
     public virtual void shoot()
     {
     }
+    public void TakeDmg(int dmg)
+    {
+        _PlayerLife -= dmg;
+        Debug.Log("holaa");
 
-
- }
+        if (_PlayerLife <= 0)
+            Destroy(gameObject);
+    }
+}

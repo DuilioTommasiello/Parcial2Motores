@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
  public class Bullet : MonoBehaviour
  {
-    int BulletDmg;
+    public int bulletdmg = 30;
     public int speed = 10;
     private Rigidbody2D rb;
     public bool CharacterBullet = false;
@@ -25,15 +25,39 @@ using UnityEngine;
     {
         if(collision.gameObject.gameObject.layer == 3 && CharacterBullet == false)
         {
+            var a = collision.gameObject.GetComponent<Player>();
+            if (a == null)
+            {
+                Debug.Log("No detecta el player ");
+            }else
+            {
+                a.TakeDmg(bulletdmg / 2);
+            }
+
+
             Debug.Log("tocaste un pj");
             Destroy(gameObject);
+
         }
         if (collision.gameObject.gameObject.layer == 6 && CharacterBullet == true)
         {
-            Debug.Log("tocaste un enemigo");
+            var b = collision.gameObject.GetComponent<Enemy>();
+            if (b == null)
+            {
+                Debug.Log("No detecta el enemigo ");
+            }else
+            {
+                b.TakeDmg(bulletdmg);
+            }
+
+
+            Debug.Log("tocaste un enemigo"); 
             Destroy(gameObject);
+
+
         }
     }
+
 
 
  }

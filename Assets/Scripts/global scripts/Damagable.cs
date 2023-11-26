@@ -4,5 +4,6 @@ using UnityEngine;
 
 public interface Damagable 
 {
-    public void TakeDmg (int dmg);
+    public virtual void TakeDmg(int dmg){}
+    
 }

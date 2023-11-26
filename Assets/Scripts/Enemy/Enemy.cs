@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Enemy : MonoBehaviour , Damagable
+public abstract class  Enemy : MonoBehaviour, Damagable
 {
-    private float Enlife = 100;
+    private int Enlife = 100;
 
     public delegate void MyMetod();
     public static event MyMetod eventCall;
@@ -17,15 +17,15 @@ public abstract class Enemy : MonoBehaviour , Damagable
         }
         shot();
     }
-    public virtual void TakeDmg(int dmg)
-    {
-        Enlife -= dmg;
-
-        if (Enlife <= 0)
-            Destroy(gameObject);
-
-    }
     public virtual void shot(){}
     public virtual void lookPL(){}
     public virtual void Patrol(){}
+    public void TakeDmg(int dmg)
+    {
+        Enlife -= dmg;
+        Debug.Log("holaa");
+    
+        if (Enlife <= 0)
+        Destroy(gameObject);
+    }
 }

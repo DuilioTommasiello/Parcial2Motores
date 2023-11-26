@@ -10,7 +10,6 @@ public class PLayer_Move : Player
 
     public override void movePL()
     {
-        Debug.Log("se esta moviendo");
         Rigidbody2D _playerRb = gameObject.GetComponent<Rigidbody2D>();
 
         float moveX = Input.GetAxisRaw("Horizontal");
