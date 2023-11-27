@@ -9,6 +9,7 @@ public class ShootEn : Enemy
     public float TimerBull;
     public float finalTimerBull = 3;
 
+
     public override void shot()
     {
         TimerBull += Time.deltaTime;

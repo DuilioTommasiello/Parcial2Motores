@@ -24,5 +24,6 @@ public class LookEnemy : Enemy
         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 5 * Time.deltaTime);
         }
     }
+    
 
 }

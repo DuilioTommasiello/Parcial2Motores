@@ -15,7 +15,7 @@ public abstract class  Enemy : MonoBehaviour, Damagable
         {
             eventCall();
         }
-        shot();
+        
     }
     public virtual void shot(){}
     public virtual void lookPL(){}
@@ -26,6 +26,11 @@ public abstract class  Enemy : MonoBehaviour, Damagable
         Debug.Log("holaa");
     
         if (Enlife <= 0)
-        Destroy(gameObject);
+        {
+           
+            Destroy(gameObject);
+            Enemy.eventCall -= eventCall;
+        }
+        
     }
 }
