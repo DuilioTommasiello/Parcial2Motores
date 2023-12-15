@@ -1,11 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-<<<<<<< HEAD
 //Mariano Benitez
-=======
-
->>>>>>> parent of 33a21ac (menu instalado)
 [RequireComponent(typeof(Rigidbody2D))]
 public abstract  class Player : MonoBehaviour,Damagable
 {
@@ -41,11 +37,7 @@ public abstract  class Player : MonoBehaviour,Damagable
     public void TakeDmg(int dmg)
     {
         _PlayerLife -= dmg;
-<<<<<<< HEAD
         Debug.Log("Estoy recibiendo "+ dmg);
-=======
-        Debug.Log("holaa");
->>>>>>> parent of 33a21ac (menu instalado)
 
         if (_PlayerLife <= 0)
             Destroy(gameObject);

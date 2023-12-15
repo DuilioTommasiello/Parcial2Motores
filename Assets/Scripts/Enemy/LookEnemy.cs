@@ -9,11 +9,7 @@ public class LookEnemy : Enemy
     [SerializeField]public Vector2 directionToPlayer;
     public Transform player;
 
-<<<<<<< HEAD
     private void Start()
-=======
-    private void Update()
->>>>>>> parent of 33a21ac (menu instalado)
     {
         Enemy.eventCall += lookPL;
 

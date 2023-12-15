@@ -10,19 +10,11 @@ public class MovmentEnemy : Enemy
     [SerializeField] List<Transform> wayPoints;
     int nextPost = 0;
 
-<<<<<<< HEAD
     private void Start()
     {
         Enemy.eventCall += Patrol;
     }
     
-=======
-
-    private void Update()
-    {
-        Patrol();
-    }
->>>>>>> parent of 33a21ac (menu instalado)
     public override void Patrol()
     {
         transform.position = Vector3.MoveTowards(transform.position, wayPoints[nextPost].transform.position, Enspeed * Time.deltaTime);
