@@ -278,7 +278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29ca8086709f6c0418774513ff541392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enspeed: 6.5
+  Enspeed: 2
   target: {fileID: 1491116811}
   wayPoints:
   - {fileID: 1618877833}
@@ -306,7 +306,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 180485852}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e594a31bf10e0a24483ae1eed5d07d44, type: 3}
   m_Name: 
@@ -314,7 +314,7 @@ MonoBehaviour:
   Enbullet: {fileID: 7305783196168703682, guid: 14c96913cf7fb074b8b04be3205b6533, type: 3}
   SpawnerBulletEn: {fileID: 1108808999}
   TimerBull: 0
-  finalTimerBull: 3
+  finalTimerBull: 11
 --- !u!61 &180485857
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -361,7 +361,7 @@ MonoBehaviour:
   Enbullet: {fileID: 2083151449650450588, guid: 71519b81496e323429bbbb1a3fb39ed5, type: 3}
   SpawnerBulletEn: {fileID: 2062466135}
   TimerBull: 0
-  finalTimerBull: 4.5
+  finalTimerBull: 25
 --- !u!4 &329100040 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8644214168230702505, guid: 8d669198be7279b47bced04d1446cbe4, type: 3}
@@ -390,14 +390,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 639464002}
-  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 0.7191141, y: 0.9201325, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1779390812}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &683597457
 GameObject:
   m_ObjectHideFlags: 0
@@ -767,7 +767,7 @@ MonoBehaviour:
   Enbullet: {fileID: 2083151449650450588, guid: 71519b81496e323429bbbb1a3fb39ed5, type: 3}
   SpawnerBulletEn: {fileID: 1570006366}
   TimerBull: 0
-  finalTimerBull: 4
+  finalTimerBull: 25
 --- !u!4 &1106692725 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8644214168230702505, guid: 8d669198be7279b47bced04d1446cbe4, type: 3}
@@ -935,7 +935,7 @@ MonoBehaviour:
   Enbullet: {fileID: 2083151449650450588, guid: 71519b81496e323429bbbb1a3fb39ed5, type: 3}
   SpawnerBulletEn: {fileID: 179453115}
   TimerBull: 0
-  finalTimerBull: 7
+  finalTimerBull: 14
 --- !u!4 &1320996870 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8644214168230702505, guid: 8d669198be7279b47bced04d1446cbe4, type: 3}
@@ -1489,7 +1489,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1779390808}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e594a31bf10e0a24483ae1eed5d07d44, type: 3}
   m_Name: 
@@ -1497,7 +1497,7 @@ MonoBehaviour:
   Enbullet: {fileID: 7305783196168703682, guid: 14c96913cf7fb074b8b04be3205b6533, type: 3}
   SpawnerBulletEn: {fileID: 639464003}
   TimerBull: 0
-  finalTimerBull: 3
+  finalTimerBull: 18
 --- !u!114 &1779390810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1630,14 +1630,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1870609810}
-  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 0.7191141, y: 0.9201325, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2023037236}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1973086148 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2063330285347941396, guid: 8d669198be7279b47bced04d1446cbe4, type: 3}
@@ -1658,7 +1658,7 @@ MonoBehaviour:
   Enbullet: {fileID: 2083151449650450588, guid: 71519b81496e323429bbbb1a3fb39ed5, type: 3}
   SpawnerBulletEn: {fileID: 929630342}
   TimerBull: 0
-  finalTimerBull: 7
+  finalTimerBull: 14
 --- !u!4 &1973086151 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8644214168230702505, guid: 8d669198be7279b47bced04d1446cbe4, type: 3}
@@ -1774,7 +1774,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2023037234}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e594a31bf10e0a24483ae1eed5d07d44, type: 3}
   m_Name: 
@@ -1782,7 +1782,7 @@ MonoBehaviour:
   Enbullet: {fileID: 7305783196168703682, guid: 14c96913cf7fb074b8b04be3205b6533, type: 3}
   SpawnerBulletEn: {fileID: 1870609811}
   TimerBull: 0
-  finalTimerBull: 3
+  finalTimerBull: 18
 --- !u!61 &2023037240
 BoxCollider2D:
   m_ObjectHideFlags: 0
