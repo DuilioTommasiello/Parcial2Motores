@@ -7,9 +7,15 @@ public abstract  class Player : MonoBehaviour,Damagable
 {
     [Header("Values")]
     [SerializeField] private int _PlayerLife = 200;
+    [SerializeField] private BarLife barraDeVida;
 
+    private void Start()
+    {
+        barraDeVida.inicializarBarDeVia(_PlayerLife);
+    }
     private void Awake()
     {
+        
         if (!GetComponent<Rigidbody2D>())
         {
             Rigidbody2D _playerRb = gameObject.AddComponent<Rigidbody2D>();
@@ -37,6 +43,7 @@ public abstract  class Player : MonoBehaviour,Damagable
     public void TakeDmg(int dmg)
     {
         _PlayerLife -= dmg;
+        barraDeVida.CambiarVidaActual(_PlayerLife);
         Debug.Log("Estoy recibiendo "+ dmg);
 
         if (_PlayerLife <= 0)
