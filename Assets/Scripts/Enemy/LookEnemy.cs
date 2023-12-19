@@ -9,13 +9,12 @@ public class LookEnemy : Enemy
     [SerializeField]public Vector2 directionToPlayer;
     public Transform player;
 
-    private void Start()
+    private void FixedUpdate()
     {
-        Enemy.eventCall += lookPL;
-
+        lookPL();
     }
 
-    public override void lookPL()
+     void lookPL()
     {
         if(player != null)
         {

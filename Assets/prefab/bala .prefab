@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4913264555671248542}
   - component: {fileID: 5295659911240155346}
   - component: {fileID: 1303646841556533927}
+  - component: {fileID: 3571941438700918849}
   m_Layer: 0
   m_Name: 'bala '
   m_TagString: Untagged
@@ -114,5 +115,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c5da4fd09217e44a9cf0f03d999147a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletdmg: 30
   speed: 10
   CharacterBullet: 1
+--- !u!50 &3571941438700918849
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6950185088234939507}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

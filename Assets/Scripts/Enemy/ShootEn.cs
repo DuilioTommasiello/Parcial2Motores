@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//Mariano Benitez y Duilio tommasiello 
+
 public class ShootEn : Enemy
 {
     public GameObject Enbullet;
@@ -9,11 +9,12 @@ public class ShootEn : Enemy
     public float TimerBull;
     public float finalTimerBull = 12;
 
-    private void Start()
+    private void FixedUpdate()
     {
-        Enemy.eventCall += shot;
+        shot();
     }
-    public override void shot()
+
+    void shot()
     {
         TimerBull += Time.deltaTime;
         if (TimerBull >= finalTimerBull)

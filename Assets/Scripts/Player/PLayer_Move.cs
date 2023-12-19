@@ -7,8 +7,12 @@ public class PLayer_Move : Player
     Vector2 _moveInput;
     public float _movSpeed = 0.3f;
 
+    private void FixedUpdate()
+    {
+        movePL();    
+    }
 
-    public override void movePL()
+    void movePL()
     {
         Rigidbody2D _playerRb = gameObject.GetComponent<Rigidbody2D>();
 

@@ -14,7 +14,6 @@ using UnityEngine;
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.gravityScale = 0;
     }
     void FixedUpdate()
     {
@@ -33,9 +32,6 @@ using UnityEngine;
             {
                 a.TakeDmg(bulletdmg / 2);
             }
-
-
-            Debug.Log("tocaste un pj");
             Destroy(gameObject);
 
         }
@@ -49,9 +45,7 @@ using UnityEngine;
             {
                 b.TakeDmg(bulletdmg);
             }
-
-
-            Debug.Log("tocaste un enemigo"); 
+            Debug.Log("tocaste un enemigo y le hiciste" +  bulletdmg); 
             Destroy(gameObject);
 
 

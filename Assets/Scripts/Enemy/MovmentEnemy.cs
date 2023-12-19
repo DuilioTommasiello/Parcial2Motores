@@ -10,12 +10,12 @@ public class MovmentEnemy : Enemy
     [SerializeField] List<Transform> wayPoints;
     int nextPost = 0;
 
-    private void Start()
+    private void FixedUpdate()
     {
-        Enemy.eventCall += Patrol;
+        Patrol();
     }
-    
-    public override void Patrol()
+
+    void Patrol()
     {
         transform.position = Vector3.MoveTowards(transform.position, wayPoints[nextPost].transform.position, Enspeed * Time.deltaTime);
         if (transform.position == wayPoints[nextPost].transform.position)

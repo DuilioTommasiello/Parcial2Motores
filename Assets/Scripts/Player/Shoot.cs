@@ -4,22 +4,40 @@ using UnityEngine;
 
 public class Shoot : Player
 {
-
     public Transform shot_point;
     public GameObject bullet;
     public GameObject ability_PB;
 
-    public override void shoot()
+    private float shootCooldown = 0.5f;
+    private float shootTimer = 0f;
+
+    private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (shootTimer > 0)
         {
-            Debug.Log("dispare");
-            Instantiate(bullet, shot_point);
+            shootTimer -= Time.deltaTime; 
         }
-        if (Input.GetKeyUp(KeyCode.X))
+
+        if (Input.GetKey(KeyCode.Space) && shootTimer <= 0)
         {
-            Debug.Log("dispare la habilidad");
-            Instantiate(ability_PB, shot_point);
+            ShootBullet();
         }
+
+        if (Input.GetKey(KeyCode.X) && shootTimer <= 0)
+        {
+            UseAbility();
+        }
+    }
+
+    private void ShootBullet()
+    {
+        Instantiate(bullet, shot_point.position, shot_point.rotation);
+        shootTimer = shootCooldown; 
+    }
+
+    private void UseAbility()
+    {
+        Instantiate(ability_PB, shot_point.position, shot_point.rotation);
+        shootTimer = shootCooldown; 
     }
 }
