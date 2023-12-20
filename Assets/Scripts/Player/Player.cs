@@ -6,7 +6,7 @@ using UnityEngine;
 public abstract  class Player : MonoBehaviour,Damagable
 {
     [Header("Values")]
-    [SerializeField] private int _PlayerLife = 200;
+    [SerializeField] public int _PlayerLife = 200;
     [SerializeField] private BarLife barraDeVida;
 
     private void Start()

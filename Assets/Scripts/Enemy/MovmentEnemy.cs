@@ -8,7 +8,7 @@ public class MovmentEnemy : Enemy
     public float Enspeed;
     [SerializeField] GameObject target;
     [SerializeField] List<Transform> wayPoints;
-    int nextPost = 0;
+    public int nextPost = 0;
 
     private void FixedUpdate()
     {
