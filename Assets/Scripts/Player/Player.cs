@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 //Mariano Benitez
 [RequireComponent(typeof(Rigidbody2D))]
 public abstract  class Player : MonoBehaviour,Damagable
@@ -8,11 +9,15 @@ public abstract  class Player : MonoBehaviour,Damagable
     [Header("Values")]
     [SerializeField] public int _PlayerLife = 200;
     [SerializeField] private BarLife barraDeVida;
+    private Animator animaton;
+
 
     private void Start()
     {
+        animaton = GetComponent<Animator>();
         barraDeVida.inicializarBarDeVia(_PlayerLife);
     }
+
     private void Awake()
     {
         if (!GetComponent<Rigidbody2D>())
@@ -22,11 +27,12 @@ public abstract  class Player : MonoBehaviour,Damagable
         }
     }
 
-    void Update()
+    private void Update()
     {
         if (_PlayerLife <= 0)
-        { 
-            Destroy(gameObject);
+        {
+            animaton.SetTrigger("Death");
+            Destroy(gameObject, 0.6f);
         }
     }
 
@@ -34,9 +40,14 @@ public abstract  class Player : MonoBehaviour,Damagable
     {
         _PlayerLife -= dmg;
         barraDeVida.CambiarVidaActual(_PlayerLife);
-        Debug.Log("recibi "+ dmg + " de daño");
+        Debug.Log("Recibí " + dmg + " de daño");
 
         if (_PlayerLife <= 0)
-            Destroy(gameObject);
+        {
+            animaton.SetTrigger("Death");
+            Destroy(gameObject, 0.6f);
+        }
     }
+
+
 }

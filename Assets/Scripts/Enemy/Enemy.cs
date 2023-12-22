@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public abstract class Enemy : MonoBehaviour, Damagable
 {
     public int Enlife = 100;

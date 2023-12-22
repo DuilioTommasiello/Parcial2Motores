@@ -8,6 +8,7 @@ public class waypointSerch : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if(player != null)
         transform.position = player.transform.position;
     }
 }
