@@ -16,7 +16,7 @@ public abstract class  Enemy : MonoBehaviour, Damagable
             Debug.Log(numRandom);
             if(numRandom >= 25)
             {
-                Instantiate(tool);
+                Instantiate(tool, transform.position, transform.rotation);
             }
           Destroy(gameObject);
           Debug.Log("mataste un enemigo");
