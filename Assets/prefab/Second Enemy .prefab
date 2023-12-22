@@ -207,6 +207,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29ca8086709f6c0418774513ff541392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Enlife: 100
+  tool: {fileID: 5621020692891067477, guid: 3d387f2eab3d82e468c0b75766a263a2, type: 3}
   Enspeed: 5
   target: {fileID: 0}
   wayPoints:

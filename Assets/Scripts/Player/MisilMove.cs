@@ -17,7 +17,7 @@ public class MisilMove : MonoBehaviour
         }
         else
         {
-            Debug.LogError("No se pudo encontrar el objeto misilTracker");
+            Debug.Log("No se pudo encontrar el objeto misilTracker");
         }
     }
 
@@ -38,6 +38,7 @@ public class MisilMove : MonoBehaviour
             }
 
         }
+        Destroy(gameObject, 5f);
         
     }
         void OnTriggerEnter2D(Collider2D collision)
@@ -54,7 +55,6 @@ public class MisilMove : MonoBehaviour
             }
             else
             {
-                Debug.Log("the collition isnt Working " + collision.gameObject.layer);
             }
         }
 }

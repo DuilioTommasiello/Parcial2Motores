@@ -44,8 +44,9 @@ using UnityEngine;
             }else
             {
                 b.TakeDmg(bulletdmg);
+            Debug.Log("tocaste un enemigo y le hiciste " +  bulletdmg + " todavia tiene "+ (b.Enlife - bulletdmg)); 
             }
-            Debug.Log("tocaste un enemigo y le hiciste" +  bulletdmg); 
+            
             Destroy(gameObject);
 
 

@@ -9,6 +9,7 @@ public class Shoot : Player
     public GameObject ability_PB;
 
     private float shootCooldown = 0.5f;
+    private float SecondShootCooldown = 2f;
     private float shootTimer = 0f;
 
     private void Update()
@@ -38,6 +39,6 @@ public class Shoot : Player
     private void UseAbility()
     {
         Instantiate(ability_PB, shot_point.position, shot_point.rotation);
-        shootTimer = shootCooldown; 
+        shootTimer = SecondShootCooldown; 
     }
 }

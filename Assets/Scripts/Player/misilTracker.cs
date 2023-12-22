@@ -31,9 +31,6 @@ public class misilTracker : MonoBehaviour
             enemyHasBeenFound = true;
             enemyList.Add(collision.gameObject);
             nextEnemy++;
-        }else
-        {
-            Debug.Log("the collition isnt Working " + collision.gameObject.layer);
         }
     }
 }
