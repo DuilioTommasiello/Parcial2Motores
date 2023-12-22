@@ -14,17 +14,20 @@ public abstract  class Player : MonoBehaviour,Damagable
         barraDeVida.inicializarBarDeVia(_PlayerLife);
     }
     private void Awake()
-    {        
+    {
         if (!GetComponent<Rigidbody2D>())
         {
             Rigidbody2D _playerRb = gameObject.AddComponent<Rigidbody2D>();
             _playerRb.gravityScale = 0f;
         }
     }
+
     void Update()
     {
         if (_PlayerLife <= 0)
-            Destroy(gameObject);               
+        { 
+            Destroy(gameObject);
+        }
     }
 
     public void TakeDmg(int dmg)
