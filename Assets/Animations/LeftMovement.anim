@@ -21,9 +21,15 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 1177925061, guid: d413f7e34337b8746bc76a1712bc06cc, type: 3}
+<<<<<<< Updated upstream
     - time: 0.16666667
       value: {fileID: 1928365187, guid: d413f7e34337b8746bc76a1712bc06cc, type: 3}
     - time: 0.33333334
+=======
+    - time: 0.25
+      value: {fileID: 1928365187, guid: d413f7e34337b8746bc76a1712bc06cc, type: 3}
+    - time: 0.5
+>>>>>>> Stashed changes
       value: {fileID: 1177925061, guid: d413f7e34337b8746bc76a1712bc06cc, type: 3}
     attribute: m_Sprite
     path: 

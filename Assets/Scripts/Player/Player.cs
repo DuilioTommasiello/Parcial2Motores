@@ -1,7 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+<<<<<<< Updated upstream
 using UnityEngine.SceneManagement;
+=======
+using UnityEngine.Animations;
+>>>>>>> Stashed changes
 //Mariano Benitez
 [RequireComponent(typeof(Rigidbody2D))]
 public abstract  class Player : MonoBehaviour,Damagable
@@ -10,7 +14,12 @@ public abstract  class Player : MonoBehaviour,Damagable
     [SerializeField] public int _PlayerLife = 200;
     [SerializeField] private BarLife barraDeVida;
     private Animator animaton;
+<<<<<<< Updated upstream
 
+=======
+    PLayer_Move PM;
+    Gamemanager ayuda;
+>>>>>>> Stashed changes
 
     private void Start()
     {
@@ -30,9 +39,21 @@ public abstract  class Player : MonoBehaviour,Damagable
     private void Update()
     {
         if (_PlayerLife <= 0)
+<<<<<<< Updated upstream
         {
             animaton.SetTrigger("Death");
             Destroy(gameObject, 0.6f);
+=======
+<<<<<<< Updated upstream
+        { 
+            Destroy(gameObject);
+=======
+        {
+            animaton.SetTrigger("Death");
+            Destroy(gameObject, 0.5f);
+            ayuda.PlayAgain();
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
         }
     }
 
@@ -43,10 +64,17 @@ public abstract  class Player : MonoBehaviour,Damagable
         Debug.Log("Recibí " + dmg + " de daño");
 
         if (_PlayerLife <= 0)
+<<<<<<< Updated upstream
         {
             animaton.SetTrigger("Death");
             Destroy(gameObject, 0.6f);
         }
+=======
+            
+            animaton.SetTrigger("Death");
+        Destroy(gameObject, 0.5f);
+        ayuda.PlayAgain();
+>>>>>>> Stashed changes
     }
 
 

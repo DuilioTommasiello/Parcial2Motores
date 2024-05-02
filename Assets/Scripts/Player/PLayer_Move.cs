@@ -1,9 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+<<<<<<< Updated upstream
 using UnityEngine.Animations;
 
 
+=======
+<<<<<<< Updated upstream
+using UnityEditor.Animations;
+=======
+using UnityEngine.Animations;
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 
 public class PLayer_Move : Player
 {
@@ -25,7 +33,6 @@ public class PLayer_Move : Player
     void movePL()
     {
         Rigidbody2D _playerRb = gameObject.GetComponent<Rigidbody2D>();
-
         float moveX = Input.GetAxisRaw("Horizontal");
         animator.SetFloat("Xmovement", moveX);
         float moveY = Input.GetAxisRaw("Vertical");
